@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revive Natural | Suplementos Naturales en Bogotá</title>
+  <meta name="description" content="Especialistas en suplementos, vitaminas, proteínas y colágenos para mejorar tu salud y bienestar. Entregamos a domicilio en Bogotá.">
+  <meta name="keywords" content="suplementos naturales bogota, vitaminas bogota, colágeno, proteína whey, tienda naturista bogota">
+  <meta property="og:title" content="Revive Natural | Suplementos Naturales en Bogotá">
+  <meta property="og:description" content="Especialistas en suplementos, vitaminas, proteínas y colágenos. Domicilios en Bogotá.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.revivenatural.com.co">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <a class="navbar-logo" href="#inicio">
+      <span class="logo-icon">🌿</span>
+      Revive Natural
+    </a>
+
+    <ul class="navbar-links">
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <div style="display:flex;align-items:center;gap:12px;">
+      <button class="btn-carrito-nav" id="btn-abrir-carrito" onclick="abrirCarrito()">
+        🛒 <span class="carrito-count" style="display:none">0</span>
+      </button>
+      <a class="btn-whatsapp-nav"
+         href="https://wa.me/573007145704?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20Revive%20Natural."
+         target="_blank">
+        💬 WhatsApp
+      </a>
+    </div>
+
+    <button class="navbar-hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="hero-badge">🌱 BIENESTAR NATURAL</div>
+      <h1 class="hero-titulo">
+        Tu salud,<br><span>más natural</span><br>que nunca
+      </h1>
+      <p class="hero-desc">
+        Especialistas en suplementos, vitaminas, proteínas y colágenos
+        para mejorar tu salud y bienestar. Entregamos a domicilio en Bogotá.
+      </p>
+      <div class="hero-ctas">
+        <a href="#productos" class="btn-primary">🛍️ Ver productos</a>
+        <a href="https://wa.me/573007145704?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20de%20Revive%20Natural."
+           target="_blank" class="btn-secondary">💬 Pedir por WhatsApp</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">100+</div>
+          <div class="stat-label">Productos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">★ 4.9</div>
+          <div class="stat-label">Calificación</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">2k+</div>
+          <div class="stat-label">Clientes</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-imagen">
+      <img src="imagenes/hero-tienda.jpg"
+           alt="Tienda Revive Natural"
+           onerror="this.style.display='none'">
+      <div class="hero-imagen-badge">
+        <span class="badge-icon">🚚</span>
+        <div class="badge-texto">
+          <strong>Domicilios en Bogotá</strong>
+          Suba Turingia y alrededores
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRUST BAR ── -->
+  <div class="trust-bar">
+    <div class="trust-item"><span>✅</span><span>100% Natural y Orgánico</span></div>
+    <div class="trust-item"><span>🚚</span><span>Domicilio en Bogotá</span></div>
+    <div class="trust-item"><span>💬</span><span>Asesoría Personalizada</span></div>
+    <div class="trust-item"><span>⭐</span><span>Marcas Premium</span></div>
+    <div class="trust-item"><span>🕐</span><span>Lun–Sáb 9am–7pm</span></div>
+  </div>
+
+  <!-- ── PRODUCTOS ── -->
+  <section id="productos">
+    <div class="section-header">
+      <div class="section-tag">🌿 CATÁLOGO</div>
+      <h2 class="section-titulo">Nuestros Productos</h2>
+      <p class="section-desc">
+        Selección de suplementos y productos naturales de la más alta calidad.
+        Agrega al carrito y pide fácilmente por WhatsApp.
+      </p>
+    </div>
+
+    <div class="buscador-wrap">
+      <input class="buscador"
+             id="buscador"
+             type="search"
+             placeholder="Buscar producto…"
+             aria-label="Buscar productos">
+    </div>
+
+    <div class="filtros-wrap" id="filtros-wrap">
+      <!-- Se genera automáticamente por app.js -->
+    </div>
+
+    <div class="productos-grid" id="productos-grid">
+      <!-- Se genera automáticamente por app.js -->
+    </div>
+  </section>
+
+  <!-- ── NOSOTROS ── -->
+  <section class="nosotros-section" id="nosotros">
+    <div class="section-header">
+      <div class="section-tag">SOBRE NOSOTROS</div>
+      <h2 class="section-titulo">¿Por qué Revive Natural?</h2>
+      <p class="section-desc">
+        Somos una tienda naturista ubicada en Suba Turingia, Bogotá.
+        Más de 2.000 clientes confían en nosotros para mejorar su calidad de vida.
+      </p>
+    </div>
+    <div class="valores-grid">
+      <div class="valor-card">
+        <div class="valor-icon">🌿</div>
+        <div class="valor-titulo">100% Natural</div>
+        <div class="valor-desc">Productos de origen natural y orgánico cuidadosamente seleccionados para tu bienestar.</div>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🏆</div>
+        <div class="valor-titulo">Calidad Premium</div>
+        <div class="valor-desc">Solo trabajamos con las mejores marcas y proveedores del mercado colombiano.</div>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">💚</div>
+        <div class="valor-titulo">Salud Integral</div>
+        <div class="valor-desc">Enfocados en mejorar tu salud física y mental de forma natural y sostenible.</div>
+      </div>
+      <div class="valor-card">
+        <div class="valor-icon">🤝</div>
+        <div class="valor-titulo">Asesoría Personal</div>
+        <div class="valor-desc">Te guiamos para encontrar exactamente lo que necesitas según tus objetivos.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIOS ── -->
+  <section class="testimonios-section">
+    <div class="section-header">
+      <div class="section-tag">⭐ TESTIMONIOS</div>
+      <h2 class="section-titulo">Lo que dicen nuestros clientes</h2>
+    </div>
+    <div class="testimonios-grid">
+      <div class="testimonio-card">
+        <div class="estrellas">★★★★★</div>
+        <p class="testimonio-texto">"Llevo 3 meses tomando el colágeno y la diferencia en mi piel y articulaciones es increíble. Súper recomendados, siempre están disponibles por WhatsApp."</p>
+        <div class="testimonio-autor">
+          <div class="autor-avatar">👩</div>
+          <div>
+            <div class="autor-nombre">María Fernanda G.</div>
+            <div class="autor-ciudad">📍 Suba, Bogotá</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio-card">
+        <div class="estrellas">★★★★★</div>
+        <p class="testimonio-texto">"La proteína Whey es de excelente calidad y el precio es muy competitivo. El domicilio llegó rápido y bien empacado. Volveré a pedir."</p>
+        <div class="testimonio-autor">
+          <div class="autor-avatar">👨</div>
+          <div>
+            <div class="autor-nombre">Carlos A.</div>
+            <div class="autor-ciudad">📍 Engativá, Bogotá</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio-card">
+        <div class="estrellas">★★★★★</div>
+        <p class="testimonio-texto">"Me asesoraron perfectamente para elegir los suplementos correctos. La atención es muy profesional y los productos llegaron en perfectas condiciones."</p>
+        <div class="testimonio-autor">
+          <div class="autor-avatar">👩</div>
+          <div>
+            <div class="autor-nombre">Alejandra R.</div>
+            <div class="autor-ciudad">📍 Usaquén, Bogotá</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACTO ── -->
+  <section id="contacto">
+    <div class="section-header">
+      <div class="section-tag">📞 CONTACTO</div>
+      <h2 class="section-titulo">¿Listo para empezar?</h2>
+      <p class="section-desc">Estamos listos para atenderte y ayudarte a encontrar los productos que necesitas.</p>
+    </div>
+    <div class="contacto-grid">
+      <div class="contacto-card">
+        <div class="contacto-icon">💬</div>
+        <div class="contacto-titulo">WhatsApp</div>
+        <div class="contacto-valor">
+          <a href="https://wa.me/573007145704" target="_blank" style="color:var(--verde-vivo);font-weight:600;">300 714 5704</a>
+        </div>
+      </div>
+      <div class="contacto-card">
+        <div class="contacto-icon">📍</div>
+        <div class="contacto-titulo">Ubicación</div>
+        <div class="contacto-valor">Suba Turingia, Bogotá</div>
+      </div>
+      <div class="contacto-card">
+        <div class="contacto-icon">🚚</div>
+        <div class="contacto-titulo">Entregas</div>
+        <div class="contacto-valor">Domicilios en Bogotá</div>
+      </div>
+      <div class="contacto-card">
+        <div class="contacto-icon">🕐</div>
+        <div class="contacto-titulo">Horario</div>
+        <div class="contacto-valor">Lun–Sáb: 9am – 7pm</div>
+      </div>
+    </div>
+    <div class="contacto-cta">
+      <a href="https://wa.me/573007145704?text=Hola%2C%20quiero%20pedir%20informaci%C3%B3n%20sobre%20los%20productos%20de%20Revive%20Natural."
+         target="_blank" class="btn-primary" style="font-size:1.05rem;padding:16px 36px;">
+        💬 Escríbenos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><span class="logo-icon">🌿</span> Revive Natural</div>
+        <p class="footer-desc">Tienda naturista especializada en suplementos, vitaminas, proteínas y productos naturales para tu bienestar. Suba Turingia, Bogotá.</p>
+      </div>
+      <div>
+        <div class="footer-titulo">Navegación</div>
+        <ul class="footer-lista">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-titulo">Categorías</div>
+        <ul class="footer-lista" id="footer-categorias">
+          <!-- Se genera por JS -->
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Revive Natural. Todos los derechos reservados.</span>
+      <span>Bogotá, Colombia 🇨🇴</span>
+    </div>
+  </footer>
+
+  <!-- ── PANEL CARRITO ── -->
+  <div class="carrito-overlay" id="carrito-overlay"></div>
+  <div class="carrito-panel" id="carrito-panel">
+    <div class="carrito-header">
+      <h2>🛒 Mi carrito</h2>
+      <button class="btn-cerrar-carrito" onclick="cerrarCarrito()">✕</button>
+    </div>
+    <div class="carrito-items" id="carrito-items"></div>
+    <div class="carrito-footer">
+      <div class="carrito-subtotal">
+        <span>Subtotal</span>
+        <span id="carrito-subtotal-val">$ 0</span>
+      </div>
+      <div class="carrito-total">
+        <span>Total</span>
+        <span id="carrito-total-val">$ 0</span>
+      </div>
+      <button class="btn-pedir-wa" onclick="pedirPorWhatsApp()">
+        💬 Confirmar pedido por WhatsApp
+      </button>
+      <p class="carrito-nota">Te contactaremos para confirmar disponibilidad y forma de pago.</p>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Scripts -->
+  <script src="productos.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Footer categorías
+    document.getElementById('footer-categorias').innerHTML =
+      CATEGORIAS.filter(c => c !== 'Todos').map(c =>
+        `<li><a href="#productos" onclick="seleccionarCategoria('${c}')">${c}</a></li>`
+      ).join('');
+  </script>
+</body>
+</html>
